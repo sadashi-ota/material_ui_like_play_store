@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tab_indicator_height">4dp</dimen>
+    <dimen name="sample_page_text_size">24sp</dimen>
+    <dimen name="appbar_elevation">4dp</dimen>
+    <dimen name="toolbar_elevation">5dp</dimen>
+    <dimen name="toolbar_layout_margin">8dp</dimen>
+</resources>

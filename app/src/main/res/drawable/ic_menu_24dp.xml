@@ -1,0 +1,45 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportHeight="100"
+            android:viewportWidth="100">
+            <group
+                android:name="rotation"
+                android:pivotX="50"
+                android:pivotY="50">
+                <path
+                    android:name="menu"
+                    android:pathData="M20 30,L80 30,M20 50,L80 50,M20 70,L80 70"
+                    android:strokeColor="#000000"
+                    android:strokeWidth="6"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target
+        android:name="menu">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="500"
+                android:propertyName="pathData"
+                android:valueFrom="M20 30,L80 30,M20 50,L80 50,M20 70,L80 70"
+                android:valueTo="M50 25,L80 50,M20 50,L80 50,M50 75,L80 50"
+                android:valueType="pathType"/>
+        </aapt:attr>
+    </target>
+    <target
+        android:name="rotation">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="500"
+                android:propertyName="rotation"
+                android:valueFrom="0"
+                android:valueTo="180"
+                android:valueType="floatType"/>
+        </aapt:attr>
+    </target>
+</animated-vector>
+

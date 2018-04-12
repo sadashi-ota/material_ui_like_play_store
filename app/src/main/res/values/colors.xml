@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="clear">#00FFFFFF</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">@android:color/holo_red_light</color>
+
+    <color name="textTabSelectedColor">@android:color/white</color>
+    <color name="textTabColor">@android:color/darker_gray</color>
+
+    <color name="bgColorTabFirst">@android:color/holo_green_light</color>
+    <color name="bgColorTabSecond">@android:color/holo_red_light</color>
+    <color name="bgColorTabThird">@android:color/holo_orange_light</color>
+    <color name="bgColorTabFourth">@android:color/holo_blue_light</color>
+    <color name="bgColorTabFifth">@android:color/holo_purple</color>
+</resources>

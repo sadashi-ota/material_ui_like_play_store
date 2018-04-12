@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Material UI Sample</string>
+    <string name="menu_sample">hoge</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="menu_search">search</string>
+</resources>
