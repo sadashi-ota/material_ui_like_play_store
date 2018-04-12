@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     @BindView(R.id.title)
     TextView title;
-    @BindView(R.id.search)
-    EditText search;
+    SearchView search;
+    MenuItem searchMenu;
 
     private int statusBarHeight;
     private AnimatedVectorDrawable menuDrawable;
@@ -121,6 +121,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        toolbar.inflateMenu(R.menu.search);
+        searchMenu = toolbar.getMenu().findItem(R.id.menu_search);
+        search = (SearchView) searchMenu.getActionView();
+        search.setIconifiedByDefault(false);
+        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -164,15 +178,19 @@ public class MainActivity extends AppCompatActivity {
     private void toggleSearchView() {
         if (title.getVisibility() == View.VISIBLE) {
             title.setVisibility(View.GONE);
+            searchMenu.setVisible(true);
             search.setVisibility(View.VISIBLE);
+            search.setIconified(false);
             toolbar.setNavigationIcon(menuDrawable);
             menuDrawable.start();
         } else {
-            title.setVisibility(View.VISIBLE);
-            search.clearFocus();
             search.setVisibility(View.GONE);
+            search.clearFocus();
+            search.setIconified(true);
+            searchMenu.setVisible(false);
             toolbar.setNavigationIcon(arrowDrawable);
             arrowDrawable.start();
+            title.setVisibility(View.VISIBLE);
         }
     }
 
