@@ -22,8 +22,8 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.sadashi.apps.ui.material.R;
@@ -125,11 +125,16 @@ public class MainActivity extends AppCompatActivity {
         searchMenu = toolbar.getMenu().findItem(R.id.menu_search);
         search = (SearchView) searchMenu.getActionView();
         search.setIconifiedByDefault(false);
+
+        ImageView icon = search.findViewById(android.support.v7.appcompat.R.id.search_mag_icon);
+        icon.setImageDrawable(null);
+
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
                 return false;
             }
+
             @Override
             public boolean onQueryTextChange(String s) {
                 return false;
@@ -179,12 +184,10 @@ public class MainActivity extends AppCompatActivity {
         if (title.getVisibility() == View.VISIBLE) {
             title.setVisibility(View.GONE);
             searchMenu.setVisible(true);
-            search.setVisibility(View.VISIBLE);
             search.setIconified(false);
             toolbar.setNavigationIcon(menuDrawable);
             menuDrawable.start();
         } else {
-            search.setVisibility(View.GONE);
             search.clearFocus();
             search.setIconified(true);
             searchMenu.setVisible(false);
