@@ -2,6 +2,10 @@
 
 Material UI like a Google Play Store.
 
+# Overview
+
+![sample_apps](./doc/material_ui_sample.gif)
+
 # Qiita
 
 [Google Play ストアのトップページのUIを考察してみた][1]
