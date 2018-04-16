@@ -59,6 +59,7 @@
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:elevation="@dimen/appbar_elevation"
                 app:tabIndicatorColor="@color/textTabSelectedColor"
                 app:tabIndicatorHeight="@dimen/tab_indicator_height"
                 app:tabSelectedTextColor="@color/textTabSelectedColor"
