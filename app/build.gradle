@@ -1,26 +1,32 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.sadashi.apps.ui.material"
         minSdkVersion 21
-        targetSdkVersion 26
-        versionCode 1
-        versionName "0.0.1"
+        targetSdkVersion 28
+        versionCode 2
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 ext {
-    supportLibraryVersion = '26.1.0'
+    supportLibraryVersion = '28.0.0'
     butterkbifeVersion = '8.8.1'
 }
 
@@ -32,4 +38,7 @@ dependencies {
     implementation "com.android.support:support-v4:$supportLibraryVersion"
     implementation "com.jakewharton:butterknife:$butterkbifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterkbifeVersion"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }
