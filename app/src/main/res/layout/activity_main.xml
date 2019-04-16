@@ -3,7 +3,7 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
@@ -15,7 +15,7 @@
         android:fitsSystemWindows="true">
 
         <FrameLayout
-            android:id="@+id/reveal_layout"
+            android:id="@+id/revealLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="@dimen/appbar_elevation"
@@ -23,7 +23,7 @@
             app:layout_behavior="com.sadashi.apps.ui.material.views.behaviors.HeaderBehavior">
 
             <View
-                android:id="@+id/bg_reveal"
+                android:id="@+id/bgReveal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -48,7 +48,7 @@
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:titleTextColor="@android:color/black" >
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/titleText"
                     android:textSize="20sp"
                     android:elevation="@dimen/toolbar_elevation"
                     android:layout_width="match_parent"
@@ -68,25 +68,25 @@
         </android.support.design.widget.AppBarLayout>
 
         <FrameLayout
-            android:id="@+id/status_reveal_layout"
+            android:id="@+id/statusRevealLayout"
             android:layout_width="match_parent"
             android:layout_height="24dp"
             android:elevation="@dimen/appbar_elevation"
             android:fitsSystemWindows="true">
 
             <View
-                android:id="@+id/bg_status_reveal"
+                android:id="@+id/bgStatusReveal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
             <View
-                android:id="@+id/status_reveal"
+                android:id="@+id/statusReveal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </FrameLayout>
 
         <android.support.v4.view.ViewPager
-            android:id="@+id/view_pager"
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -94,7 +94,7 @@
     </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView
-        android:id="@+id/navigation_view"
+        android:id="@+id/navigationView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
